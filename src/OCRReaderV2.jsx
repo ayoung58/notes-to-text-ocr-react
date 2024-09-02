@@ -80,7 +80,7 @@ const OCRReaderV2 = () => {
         <h3>OCRReaderV2</h3>
             <ImageUpload onImageChange={handleImageChange} />
             {image && (
-                <div style={{maxHeight: "80vh"}}>
+                <div style={{display: "flex", justifyContent: "center", gap: "10px", marginTop: "20px"}}>
                     <img
                         src={image}
                         style={{
