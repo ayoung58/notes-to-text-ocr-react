@@ -20,7 +20,13 @@ const OCRReader = () => {
             {/* if image is not null, show the image with HTML */}
             {image && (
                 <div>
-                    <img src={image} />
+                    <img 
+                        src={image} 
+                        style={{
+                            maxWidth: "100%",
+                            maxHeight: "100%"
+                        }}
+                    />
                 </div>
             )}
         </div>
