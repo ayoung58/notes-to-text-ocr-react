@@ -22,14 +22,14 @@ const ImageUpload = ({ onImageChange }) => {
             };
             reader.readAsDataURL(selectedFile);
         }
-    }
+    };
     return (
         <div>
             {/* only accept a file input, and can only be images */}
             {/* onChange: whenever input changes, call handleImageUpload */}
             <input type="file" accept="image/*" onChange={handleImageUpload}/>
         </div>
-    )
+    );
 };
 
 // from this file, we export one component: ImageUpload

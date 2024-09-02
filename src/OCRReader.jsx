@@ -1,6 +1,6 @@
 // OCRReader Component
 
-import React from "react";
+import React, { useState } from "react";
 import ImageUpload from "./ImageUpload";
 
 const OCRReader = () => {
@@ -24,7 +24,7 @@ const OCRReader = () => {
                 </div>
             )}
         </div>
-    )
+    );
 };
 
 export default OCRReader;
