@@ -10,7 +10,7 @@ const OCRReaderV3 = () => {
 
     const [image, setImage] = useState(null);
     const [text, setText] = useState("-----------");
-    const [grayScaledImage, setGrayScaledImage] = useState(null);
+    const [processedImage, setProcessedImage] = useState(null);
 
     const handleImageChange = ( imageData) => {
         setImage(imageData);
@@ -37,10 +37,17 @@ const OCRReaderV3 = () => {
                 // expand to three dimensions with third being -1
                 // we add this third dimension because we need the third one
                 gray = tf.expandDims(gray, -1);
-                // we want values to be in range of 0 to 1, so we need to divide
-                // all elements by the largest number
-                gray = tf.div(gray, tf.scalar(255));
-                return gray;
+                // adjust the contrast
+                const contrastFactor = 6;
+                // average out the grays
+                const mean = gray.mean();
+                // subtract the mean of all grays from each gray value
+                // multiply by contrastFactor, and then add the mean back
+                let adjustContrast = gray.sub(mean).mul(contrastFactor).add(mean);
+                // clipByValue(0, 1) will make all values between 0 and 1 :)
+                adjustedContrast = adjustedContrast.clipByValue(0, 1);
+
+                return adjustedContrast;
             });
             // draws out the image, if rank-2 tensor, then draws grayScale (what we want and have, because of third -1 param)
             // if rank-3 tensor, must have depth of 1, 3, 4. With depth 1, draws grayScale.
@@ -58,7 +65,7 @@ const OCRReaderV3 = () => {
             ctx.putImageData(imgData, 0, 0);
             // to show to the HTML img tag, we need to convert to base 64 encoding
             const processedImageDataUrl = canvas.toDataURL();
-            setGrayScaledImage(processedImageDataUrl);
+            setProcessedImage(processedImageDataUrl);
 
             // Now we pass the grayscaled image to Tesseract
             Tesseract.recognize(processedImageDataUrl, "eng", {
@@ -97,11 +104,11 @@ const OCRReaderV3 = () => {
                         }}
                     />
                 </div>
-                {grayScaledImage && (
+                {processedImage && (
                     <div>
-                    <p>Original Image</p>
+                    <p>Processed Image</p>
                     <img
-                        src={grayScaledImage}
+                        src={processedImage}
                         alt="GrayScale"
                         style={{
                             maxWidth:"80%",
