@@ -43,7 +43,7 @@ const OCRReaderV3 = () => {
                 const mean = gray.mean();
                 // subtract the mean of all grays from each gray value
                 // multiply by contrastFactor, and then add the mean back
-                let adjustContrast = gray.sub(mean).mul(contrastFactor).add(mean);
+                let adjustedContrast = gray.sub(mean).mul(contrastFactor).add(mean);
                 // clipByValue(0, 1) will make all values between 0 and 1 :)
                 adjustedContrast = adjustedContrast.clipByValue(0, 1);
 
@@ -109,7 +109,7 @@ const OCRReaderV3 = () => {
                     <p>Processed Image</p>
                     <img
                         src={processedImage}
-                        alt="GrayScale"
+                        alt="Processed Image"
                         style={{
                             maxWidth:"80%",
                             maxHeight: "auto",
