@@ -14,6 +14,7 @@ const OCRReader = () => {
 
     const handleImageChange = (imageData) => {
         setImage(imageData);
+        processImage(imageData);
     };
 
     // tesseract takes the image data, console log data, image gets converted to text
