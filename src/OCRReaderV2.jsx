@@ -1,5 +1,8 @@
 // OCRReaderV2 component
 
+// Using TensorFlow to remove background color noise
+// Then, using Tesseract to perform OCR on the grayscale image
+
 import React, { useState } from "react";
 import Tesseract from "tesseract.js";
 import ImageUpload from "./ImageUpload";

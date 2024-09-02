@@ -1,5 +1,8 @@
 // OCRReader Component
 
+// No modification to image, no Tensorflow
+// Just using Tesseract library to operate on uploaded image
+
 import React, { useState } from "react";
 import Tesseract from "tesseract.js";
 import ImageUpload from "./ImageUpload";
