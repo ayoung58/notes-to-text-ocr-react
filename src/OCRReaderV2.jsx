@@ -80,14 +80,36 @@ const OCRReaderV2 = () => {
         <h3>OCRReaderV2</h3>
             <ImageUpload onImageChange={handleImageChange} />
             {image && (
-                <div style={{display: "flex", justifyContent: "center", gap: "10px", marginTop: "20px"}}>
+                <div style={{
+                    display: "flex", 
+                    justifyContent: "center", 
+                    gap: "10px", 
+                    marginTop: "20px"
+                }}
+                >
+                <div>
+                    <p>Original Image</p>
                     <img
                         src={image}
                         style={{
-                            maxWidth:"100%",
-                            maxHeight: "100%",
+                            maxWidth:"50%",
+                            maxHeight: "auto",
                         }}
                     />
+                </div>
+                {grayScaledImage && (
+                    <div>
+                    <p>Original Image</p>
+                    <img
+                        src={grayScaledImage}
+                        alt="GrayScale"
+                        style={{
+                            maxWidth:"50%",
+                            maxHeight: "auto",
+                        }}
+                    />
+                </div>
+                )}
                 </div>
             )}
             <div style={{marginTop: "20px"}}>
