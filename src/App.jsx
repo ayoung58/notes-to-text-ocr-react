@@ -10,7 +10,17 @@ function App() {
       Optical Character Recognition Project with MHL AI/ML Global Hack Week
       {/* Use the componenet here */}
       {/* OCRReader will internally use ImageUpload component */}
-      <OCRReader />
+      <div style={{
+        // adding a black line that can divide OCRReader versions
+        width: "100%",
+        height: "5px",
+        color:"black",
+        padding: "2px",
+        margin: "2px",
+        backgroundColor: "black",
+      }}>
+        <OCRReader />
+      </div>
     </main>
   )
 }
