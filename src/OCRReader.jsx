@@ -48,7 +48,7 @@ const OCRReader = () => {
                     />
                 </div>
             )}
-            <div style={{ marginTop: "20px" }}>
+            <div style={{ marginTop: "20px", color:"white"}}>
                 <h1>Extracted Text:</h1>
                 {/* text from line 13, storing the text from tesseract */}
                 <p>{text}</p>

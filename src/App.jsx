@@ -17,7 +17,7 @@ function App() {
         color:"black",
         padding: "2px",
         margin: "2px",
-        backgroundColor: "black",
+        backgroundColor: "white",
       }}>
         <OCRReader />
       </div>

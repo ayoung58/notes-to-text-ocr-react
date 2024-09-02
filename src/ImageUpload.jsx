@@ -27,7 +27,9 @@ const ImageUpload = ({ onImageChange }) => {
         <div>
             {/* only accept a file input, and can only be images */}
             {/* onChange: whenever input changes, call handleImageUpload */}
-            <input type="file" accept="image/*" onChange={handleImageUpload}/>
+            <input type="file" accept="image/*" onChange={handleImageUpload} style={{
+                padding: "20px", backgroundColor: "gray"
+            }}/>
         </div>
     );
 };
