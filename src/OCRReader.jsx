@@ -28,12 +28,17 @@ const OCRReader = () => {
     };
 
     return (
-        <div>
+        <div style={{
+            textAlign: "center",
+            maxWidth: "900px",
+            // adjust top margin to be 20px
+            margin: "20px auto",
+        }}>
             {/* interanlly uses and sets the parameter of ImageUpload component */}
             <ImageUpload onImageChange={handleImageChange} />
             {/* if image is not null, show the image with HTML */}
             {image && (
-                <div>
+                <div style={{overflow: "auto", maxHeight: "80vh "}}>
                     <img 
                         src={image} 
                         style={{
@@ -43,7 +48,7 @@ const OCRReader = () => {
                     />
                 </div>
             )}
-            <div>
+            <div style={{ marginTop: "20px" }}>
                 <h1>Extracted Text:</h1>
                 {/* text from line 13, storing the text from tesseract */}
                 <p>{text}</p>
