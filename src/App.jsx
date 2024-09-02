@@ -9,7 +9,8 @@ function App() {
     <main>
       Optical Character Recognition Project with MHL AI/ML Global Hack Week
       {/* Use the componenet here */}
-      <ImageUpload />
+      {/* OCRReader will internally use ImageUpload component */}
+      <OCRReader />
     </main>
   )
 }

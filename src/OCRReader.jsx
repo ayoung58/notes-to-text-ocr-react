@@ -15,7 +15,7 @@ const OCRReader = () => {
 
     return (
         <div>
-            {/* sets the parameter of ImageUpload component */}
+            {/* interanlly uses and sets the parameter of ImageUpload component */}
             <ImageUpload onImageChange={handleImageChange} />
         </div>
     )
