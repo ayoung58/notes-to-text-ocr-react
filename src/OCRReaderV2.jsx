@@ -92,7 +92,7 @@ const OCRReaderV2 = () => {
                     <img
                         src={image}
                         style={{
-                            maxWidth:"50%",
+                            maxWidth:"80%",
                             maxHeight: "auto",
                         }}
                     />
@@ -104,7 +104,7 @@ const OCRReaderV2 = () => {
                         src={grayScaledImage}
                         alt="GrayScale"
                         style={{
-                            maxWidth:"50%",
+                            maxWidth:"80%",
                             maxHeight: "auto",
                         }}
                     />
