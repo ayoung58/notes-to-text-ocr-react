@@ -102,7 +102,7 @@ const OCRReaderV2 = () => {
                 </div>
                 {grayScaledImage && (
                     <div>
-                    <p>Original Image</p>
+                    <p>GrayScaled Image</p>
                     <img
                         src={grayScaledImage}
                         alt="GrayScale"
