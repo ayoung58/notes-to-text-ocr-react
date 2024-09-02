@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import OCRReader from './OCRReader';
+import OCRReaderV1 from './OCRReaderV1';
 import OCRReaderV2 from './OCRReaderV2';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         margin: "2px",
         backgroundColor: "white",
       }}>
-        <OCRReader />
+        <OCRReaderV1 />
       </div>
       <div style={{
         // adding a black line that can divide OCRReader versions
