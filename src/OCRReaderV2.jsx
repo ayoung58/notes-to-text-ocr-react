@@ -1,8 +1,8 @@
 // OCRReaderV2 component
 
-import React from "react";
-import ImageUpload from "./ImageUpload";
+import React, { useState } from "react";
 import Tesseract from "tesseract.js";
+import ImageUpload from "./ImageUpload";
 
 const OCRReaderV2 = () => {
 
@@ -12,7 +12,7 @@ const OCRReaderV2 = () => {
     const handleImageChange = ( imageData) => {
         setImage(imageData);
         processImage(imageData);
-    }
+    };
 
     const processImage = (imageData) => {
         Tesseract.recognize(imageData, "eng", {
