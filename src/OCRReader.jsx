@@ -17,6 +17,12 @@ const OCRReader = () => {
         <div>
             {/* interanlly uses and sets the parameter of ImageUpload component */}
             <ImageUpload onImageChange={handleImageChange} />
+            {/* if image is not null, show the image with HTML */}
+            {image && (
+                <div>
+                    <img src={image} />
+                </div>
+            )}
         </div>
     )
 };
