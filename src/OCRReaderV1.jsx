@@ -34,6 +34,7 @@ const OCRReader = () => {
             // adjust top margin to be 20px
             margin: "20px auto",
         }}>
+        <h3>OCRReaderV1</h3>
             {/* interanlly uses and sets the parameter of ImageUpload component */}
             <ImageUpload onImageChange={handleImageChange} />
             {/* if image is not null, show the image with HTML */}
