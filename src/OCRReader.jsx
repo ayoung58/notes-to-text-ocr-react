@@ -42,6 +42,11 @@ const OCRReader = () => {
                     />
                 </div>
             )}
+            <div>
+                <h3>Extracted Text:</h3>
+                {/* text from line 13, storing the text from tesseract */}
+                <p>{text}</p>
+            </div>
         </div>
     );
 };
