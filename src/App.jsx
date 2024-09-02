@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import OCRReader from './OCRReader';
+import OCRReaderV2 from './OCRReaderV2';
 
 function App() {
   return (
@@ -20,6 +21,17 @@ function App() {
         backgroundColor: "white",
       }}>
         <OCRReader />
+      </div>
+      <div style={{
+        // adding a black line that can divide OCRReader versions
+        width: "100%",
+        height: "5px",
+        color:"blue",
+        padding: "2px",
+        margin: "2px",
+        backgroundColor: "white",
+      }}>
+        <OCRReaderV2 />
       </div>
     </main>
   )
