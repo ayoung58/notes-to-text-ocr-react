@@ -22,8 +22,24 @@ const OCRReaderV2 = () => {
         });
     };
     return (
-        <div>
+        <div style={{textAlign: "center", marginTop: "auto"}}>
             <h1>Hello! This is OCRReaderV2</h1>
+            <ImageUpload onImageChange={handleImageChange} />
+            {image && (
+                <div style={{maxHeight: "80vh"}}>
+                    <img
+                        src={image}
+                        style={{
+                            maxWidth:"100%",
+                            maxHeight: "100%",
+                        }}
+                    />
+                </div>
+            )}
+            <div style={{marginTop: "20px"}}>
+                <h2>Extracted Text</h2>
+                <p>{text}</p>
+            </div>
         </div>
     )
 }
