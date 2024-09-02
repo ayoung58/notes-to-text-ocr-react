@@ -19,9 +19,9 @@ function App() {
         padding: "2px",
         margin: "2px",
         backgroundColor: "white",
-      }}>
-        <OCRReaderV1 />
-      </div>
+      }}
+      />
+      <OCRReaderV1 />
       <div style={{
         // adding a black line that can divide OCRReader versions
         width: "100%",
@@ -30,9 +30,8 @@ function App() {
         padding: "2px",
         margin: "2px",
         backgroundColor: "white",
-      }}>
-        <OCRReaderV2 />
-      </div>
+      }}/>
+      <OCRReaderV2 />
     </main>
   )
 }
