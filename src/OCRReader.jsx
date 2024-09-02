@@ -10,7 +10,7 @@ const OCRReader = () => {
     // initially, image is null, but if 1.png is uploaded, setImage is 1.png, and image is set to 1.png
     const [image, setImage] = useState(null);
     // set up a hook for tesseract
-    const [text, setText] = useState("");
+    const [text, setText] = useState("-----------");
 
     const handleImageChange = (imageData) => {
         setImage(imageData);
